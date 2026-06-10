@@ -23,7 +23,7 @@ export default function Navbar() {
             <img
               src="/images/logo.png"
               alt="Green Energy Systems"
-              className="h-auto w-[80px]"
+              className="h-auto w-[100px] sm:w-[80px]"
             />
           </a>
 
