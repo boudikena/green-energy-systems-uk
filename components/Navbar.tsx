@@ -49,7 +49,7 @@ export default function Navbar() {
           >
             <span className="h-[2px] w-5 rounded bg-white" />
             <span className="h-[2px] w-5 rounded bg-white" />
-            <span className="h-[2px] w-3.5 self-start rounded bg-white" />
+            <span className="h-[2px] w-5 rounded bg-white" />
           </button>
         </nav>
 
