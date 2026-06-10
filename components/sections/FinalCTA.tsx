@@ -19,7 +19,7 @@ export default function FinalCTA() {
             className="rounded-full bg-accent px-8 py-3.5 text-[0.9375rem] font-medium
                        text-ink transition-all hover:-translate-y-0.5 hover:brightness-90"
           >
-            Get your free design
+            Start your solar journey
           </a>
           <a
             href="tel:03301337831"
