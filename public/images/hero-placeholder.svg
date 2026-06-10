@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900">
+  <defs>
+    <!-- Sky gradient -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0d3d47"/>
+      <stop offset="60%"  stop-color="#11505A"/>
+      <stop offset="100%" stop-color="#1a6b78"/>
+    </linearGradient>
+    <!-- Ground/horizon glow -->
+    <linearGradient id="horizon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1a6b78" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0B2A2E"/>
+    </linearGradient>
+    <!-- Sun glow -->
+    <radialGradient id="sun-glow" cx="72%" cy="28%" r="18%">
+      <stop offset="0%"   stop-color="#34C4A8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#34C4A8" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Panel shine -->
+    <linearGradient id="panel-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#34C4A8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0B2A2E" stop-opacity="0.4"/>
+    </linearGradient>
+    <!-- Roof shadow -->
+    <linearGradient id="roof-dark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0d3d47"/>
+      <stop offset="100%" stop-color="#0B2A2E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1440" height="900" fill="url(#sky)"/>
+
+  <!-- Sun glow bloom -->
+  <ellipse cx="1037" cy="252" rx="260" ry="160" fill="url(#sun-glow)"/>
+
+  <!-- Sun disc -->
+  <circle cx="1037" cy="210" r="52" fill="#34C4A8" opacity="0.22"/>
+  <circle cx="1037" cy="210" r="34" fill="#34C4A8" opacity="0.30"/>
+  <circle cx="1037" cy="210" r="18" fill="#b8f0e8" opacity="0.55"/>
+
+  <!-- Distant hills / horizon -->
+  <ellipse cx="200"  cy="680" rx="520" ry="180" fill="#0e434d" opacity="0.7"/>
+  <ellipse cx="900"  cy="720" rx="680" ry="200" fill="#0d3d47" opacity="0.6"/>
+  <ellipse cx="1340" cy="700" rx="400" ry="160" fill="#0e434d" opacity="0.55"/>
+
+  <!-- Ground -->
+  <rect x="0" y="720" width="1440" height="180" fill="#0B2A2E"/>
+  <rect x="0" y="700" width="1440" height="200" fill="url(#horizon)"/>
+
+  <!-- ── HOUSE ── -->
+  <!-- House body -->
+  <rect x="420" y="500" width="440" height="260" fill="#0d3a43" rx="2"/>
+  <!-- House shadow / depth -->
+  <rect x="420" y="500" width="440" height="14" fill="#0B2A2E" opacity="0.4"/>
+
+  <!-- Roof left face -->
+  <polygon points="390,500 640,340 640,500" fill="url(#roof-dark)"/>
+  <!-- Roof right face -->
+  <polygon points="640,340 890,500 640,500" fill="#0e434d"/>
+  <!-- Roof ridge line -->
+  <line x1="640" y1="340" x2="640" y2="340" stroke="#34C4A8" stroke-width="1" opacity="0.3"/>
+
+  <!-- ── SOLAR PANELS on left roof face ── -->
+  <!-- Panel row 1 -->
+  <g opacity="0.92">
+    <!-- Panel outlines (parallelograms projected onto left roof pitch) -->
+    <polygon points="470,475 530,438 558,462 498,499" fill="#0B2A2E" stroke="#34C4A8" stroke-width="0.8"/>
+    <polygon points="533,440 593,403 621,427 561,464" fill="#0B2A2E" stroke="#34C4A8" stroke-width="0.8"/>
+    <polygon points="596,404 627,385 627,500 596,500" fill="#0B2A2E" stroke="#34C4A8" stroke-width="0.5" opacity="0.4"/>
+
+    <!-- Panel row 2 -->
+    <polygon points="449,492 509,455 537,479 477,516" fill="#0B2A2E" stroke="#34C4A8" stroke-width="0.8"/>
+    <polygon points="512,457 572,420 600,444 540,481" fill="#0B2A2E" stroke="#34C4A8" stroke-width="0.8"/>
+
+    <!-- Panel shine overlay -->
+    <polygon points="470,475 627,385 627,500 449,516" fill="url(#panel-shine)" opacity="0.7"/>
+
+    <!-- Cell grid lines on panels -->
+    <line x1="500" y1="438" x2="484" y2="498" stroke="#34C4A8" stroke-width="0.4" opacity="0.5"/>
+    <line x1="530" y1="420" x2="514" y2="480" stroke="#34C4A8" stroke-width="0.4" opacity="0.5"/>
+    <line x1="560" y1="402" x2="544" y2="462" stroke="#34C4A8" stroke-width="0.4" opacity="0.5"/>
+    <line x1="470" y1="455" x2="560" y2="402" stroke="#34C4A8" stroke-width="0.4" opacity="0.5"/>
+    <line x1="488" y1="477" x2="578" y2="424" stroke="#34C4A8" stroke-width="0.4" opacity="0.5"/>
+    <line x1="506" y1="499" x2="596" y2="446" stroke="#34C4A8" stroke-width="0.4" opacity="0.5"/>
+  </g>
+
+  <!-- Window left -->
+  <rect x="455" y="540" width="72" height="80" fill="#0B2A2E" rx="3"/>
+  <rect x="457" y="542" width="68" height="76" fill="#0e4a56" rx="2" opacity="0.7"/>
+  <line x1="491" y1="542" x2="491" y2="618" stroke="#0B2A2E" stroke-width="2"/>
+  <line x1="457" y1="580" x2="525" y2="580" stroke="#0B2A2E" stroke-width="2"/>
+
+  <!-- Window right -->
+  <rect x="752" y="540" width="72" height="80" fill="#0B2A2E" rx="3"/>
+  <rect x="754" y="542" width="68" height="76" fill="#0e4a56" rx="2" opacity="0.7"/>
+  <line x1="788" y1="542" x2="788" y2="618" stroke="#0B2A2E" stroke-width="2"/>
+  <line x1="754" y1="580" x2="822" y2="580" stroke="#0B2A2E" stroke-width="2"/>
+
+  <!-- Door -->
+  <rect x="602" y="616" width="76" height="144" fill="#0B2A2E" rx="3"/>
+  <rect x="604" y="618" width="72" height="140" fill="#0d3a43" rx="2"/>
+  <circle cx="668" cy="694" r="4" fill="#34C4A8" opacity="0.6"/>
+
+  <!-- ── SECOND HOUSE (right background) ── -->
+  <rect x="960" y="580" width="260" height="180" fill="#0d3847" opacity="0.75"/>
+  <polygon points="940,580 1090,470 1240,580" fill="#0c3540" opacity="0.8"/>
+  <!-- Panels on second roof -->
+  <polygon points="980,560 1020,530 1042,550 1002,580" fill="#0B2A2E" stroke="#34C4A8" stroke-width="0.6" opacity="0.7"/>
+  <polygon points="1024,532 1064,502 1086,522 1046,552" fill="#0B2A2E" stroke="#34C4A8" stroke-width="0.6" opacity="0.7"/>
+
+  <!-- ── FOREGROUND SHRUBS ── -->
+  <ellipse cx="380"  cy="750" rx="90"  ry="40"  fill="#0c3540" opacity="0.8"/>
+  <ellipse cx="1060" cy="748" rx="110" ry="42"  fill="#0c3540" opacity="0.75"/>
+  <ellipse cx="200"  cy="755" rx="70"  ry="30"  fill="#0d3d47" opacity="0.6"/>
+  <ellipse cx="1280" cy="752" rx="80"  ry="32"  fill="#0d3d47" opacity="0.6"/>
+
+  <!-- ── ACCENT GLOW — subtle light rays from sun ── -->
+  <line x1="1037" y1="210" x2="640"  y2="340" stroke="#34C4A8" stroke-width="0.6" opacity="0.08"/>
+  <line x1="1037" y1="210" x2="560"  y2="460" stroke="#34C4A8" stroke-width="0.5" opacity="0.06"/>
+  <line x1="1037" y1="210" x2="1440" y2="500" stroke="#34C4A8" stroke-width="0.6" opacity="0.06"/>
+
+  <!-- Stars / sky texture -->
+  <circle cx="120"  cy="80"  r="1.2" fill="#7C9AA0" opacity="0.5"/>
+  <circle cx="340"  cy="55"  r="1.0" fill="#7C9AA0" opacity="0.4"/>
+  <circle cx="580"  cy="100" r="0.8" fill="#7C9AA0" opacity="0.35"/>
+  <circle cx="760"  cy="45"  r="1.2" fill="#7C9AA0" opacity="0.45"/>
+  <circle cx="950"  cy="90"  r="0.9" fill="#7C9AA0" opacity="0.4"/>
+  <circle cx="1180" cy="60"  r="1.1" fill="#7C9AA0" opacity="0.45"/>
+  <circle cx="1380" cy="110" r="0.8" fill="#7C9AA0" opacity="0.35"/>
+  <circle cx="220"  cy="140" r="0.7" fill="#7C9AA0" opacity="0.3"/>
+  <circle cx="860"  cy="130" r="0.8" fill="#7C9AA0" opacity="0.3"/>
+  <circle cx="1300" cy="155" r="0.7" fill="#7C9AA0" opacity="0.3"/>
+</svg>

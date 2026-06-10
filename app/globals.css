@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
+/* ─── GES design tokens ─────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink:    #0B2A2E;
+  --ocean:  #11505A;
+  --sage:   #7C9AA0;
+  --bone:   #F4F3EE;
+  --paper:  #FCFBF8;
+  --accent: #34C4A8;
 }
 
+/* ─── Tailwind v4 theme ─────────────────────────────── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink:    var(--ink);
+  --color-ocean:  var(--ocean);
+  --color-sage:   var(--sage);
+  --color-bone:   var(--bone);
+  --color-paper:  var(--paper);
+  --color-accent: var(--accent);
+
+  --font-sans: var(--font-poppins), system-ui, sans-serif;
+
+  --radius-pill: 9999px;
+  --radius-card: 1.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ─── Base ──────────────────────────────────────────── */
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* ─── Fade-up keyframes for hero stagger ────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-fade-up {
+  animation: fadeUp 0.7s ease forwards;
+  opacity: 0;
+}
+
+.delay-0   { animation-delay: 0ms; }
+.delay-150 { animation-delay: 150ms; }
+.delay-300 { animation-delay: 300ms; }
+
+/* ─── Trust card glow border ────────────────────────── */
+@property --glow-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate-glow {
+  to { --glow-angle: 360deg; }
+}
+
+.card-glow-border {
+  background: conic-gradient(
+    from var(--glow-angle),
+    transparent 0%,
+    transparent 85%,
+    rgba(52, 196, 168, 0.18) 89%,
+    rgba(52, 196, 168, 0.85) 93%,
+    rgba(255, 255, 255, 0.95) 95%,
+    rgba(52, 196, 168, 0.85) 97%,
+    rgba(52, 196, 168, 0.18) 99%,
+    transparent 100%
+  );
+  animation: rotate-glow 8s linear infinite;
+
+  /* Mask to border ring only — hides the centre fill */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  padding: 1.5px;
+
+  /* Soft glow that follows the bead shape */
+  filter: drop-shadow(0 0 5px rgba(52, 196, 168, 0.7))
+          drop-shadow(0 0 2px rgba(255, 255, 255, 0.4));
 }
