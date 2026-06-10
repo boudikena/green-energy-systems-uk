@@ -43,7 +43,7 @@ export default function BeliefStatement() {
         </div>
 
         {/* Staggered image placeholders — replace bg-ocean/40 with real install photos */}
-        <div className="mt-14 flex items-stretch gap-3 sm:mt-20 sm:gap-5">
+        <div className="mt-14 flex flex-col gap-3 sm:mt-20 sm:flex-row sm:gap-5">
 
           {[
             { label: "Solar Panels",    bg: "bg-ocean/40" },
