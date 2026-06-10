@@ -28,7 +28,7 @@ export default function WhatWeDo() {
         <div
           className="relative min-h-[280px] bg-ocean/25 sm:min-h-[360px] md:min-h-[520px] lg:min-h-[680px]"
           style={{
-            backgroundImage: "url('/images/residential-install.jpg')",
+            backgroundImage: "url('/images/green-energy-solar.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
