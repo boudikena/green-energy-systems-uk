@@ -80,7 +80,7 @@ export default function SolarInstallationPage() {
       <main>
 
         {/* ── 1. HERO ───────────────────────────────────────────────────── */}
-        <section className="relative flex min-h-[62vh] items-end overflow-hidden bg-ocean">
+        <section className="relative flex min-h-[62vh] items-end overflow-hidden bg-ocean pt-[160px]">
           {/* Placeholder — replace with real install aerial photo */}
           <div className="absolute inset-0 bg-ink/60" aria-hidden="true" />
 
