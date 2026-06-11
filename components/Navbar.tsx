@@ -1,8 +1,9 @@
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Locations", href: "/locations" },
+  { label: "Our Services", href: "/services" },
+  { label: "Our Products", href: "/products" },
+  { label: "Case Studies", href: "/case-studies" },
+  { label: "Service Areas", href: "/service-areas" },
+  { label: "About Us", href: "/about" },
   { label: "Reviews", href: "/reviews" },
 ];
 
