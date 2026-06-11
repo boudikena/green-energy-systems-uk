@@ -1,5 +1,5 @@
 const navLinks = [
-  { label: "Our Services", href: "/services" },
+  { label: "Our Services", href: "/services/solar-installation" },
   { label: "Our Products", href: "/products" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Service Areas", href: "/service-areas" },
